@@ -1,0 +1,145 @@
+/* Variables */
+:root {
+  --primary: #E26111;
+  --bg: #ffffff;
+  --text: #1a2b4b;
+  --text-muted: #666;
+  --card: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #ffffff;
+  --text-muted: #b0b0b0;
+  --card: #242424;
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  transition: 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 8%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.logo span {
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.mode-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Hero */
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?w=1200');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.orange-text {
+  color: var(--primary);
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: 40px;
+  padding: 5rem 8%;
+}
+
+.side-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.description {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
